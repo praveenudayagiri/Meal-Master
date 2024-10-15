@@ -1,0 +1,109 @@
+#ingredient_box {
+    width: 500px;
+    height: 50px;
+    margin-top: 40px;
+    margin-left: 250px;
+    margin-right: 30px;
+}
+.liked_meals_heading{
+  color: #721c24;
+  margin-top: 20px;
+  margin-left: 80px;
+}
+button{
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    font-size: larger;
+}
+button:hover{
+    background-color:#1E2A5E ;
+    color: #ffdd57;
+}
+main {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 100px;
+    padding-top: 50px;
+    gap: 10px;
+}
+
+.meal_card {
+    width: 250px;
+    height: 300px;
+    font-size: small;
+    padding: 10px;
+    text-decoration: none;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+                rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.meal_card:hover {
+    transform: scale(0.95); /* Scale down to 95% on hover */
+    box-shadow: rgba(136, 165, 191, 0.72) 8px 4px 20px 0px, /* Adjust shadow on hover for depth */
+                rgba(255, 255, 255, 0.8) -8px -4px 20px 0px;
+}
+
+.mealName {
+    text-align: center;
+    color: black;
+}
+
+.horizontal {
+    display: flex;
+    font-size: x-small;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.cuisine {
+    color: gray;
+}
+
+.meal_card img {
+    width: 100%; /* Make the image take the full width of its parent */
+    height: 200px; /* Maintain the aspect ratio */
+    object-fit: cover;
+    padding: 5px;
+    border-radius: 20px; /* Optional: Crop the image to fill the space */
+}
+/* General style for the validation message */
+.validation-message {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  /* Style for a positive AI response ("yes") */
+  .validation-message.yes {
+    color: #155724;
+    background-color: #d4edda;
+    border: 2px solid #c3e6cb;
+  }
+  
+  /* Style for a negative AI response ("no") */
+  .validation-message.no {
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 2px solid #f5c6cb;
+  }
+
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none; /* Remove underline from all links */
+}
+.clear_liked_meals_btn{
+    width: 200px;
+    margin-top: 30px;
+    margin-left: 80px;
+}

@@ -1,0 +1,176 @@
+/* MealDetails.css */
+body {
+    background-color: #f0f0f0; /* Subtle background color for better contrast */
+    font-family: 'Roboto', sans-serif; /* Use a modern sans-serif font */
+    color: #444; /* Set a comfortable text color */
+}
+
+.meal-details {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 12px; /* Slightly increased border radius for modern look */
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1); /* Deeper shadow for a more lifted look */
+    background: linear-gradient(to bottom right, #ffffff, #e0e0e0); /* Gradient background */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transformation */
+    overflow: hidden; /* Prevent overflow of child elements */
+}
+
+.meal-details:hover {
+    transform: translateY(-8px); /* Lift effect on hover */
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2); /* More shadow on hover */
+}
+
+.meal-header {
+    text-align: center;
+    position: relative; /* Position relative for positioning children */
+}
+
+.meal-name {
+    font-size: 2.5em; /* Increased font size for meal name */
+    margin-bottom: 10px;
+    color: #333; /* Darker color for contrast */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Subtle text shadow */
+    animation: slideIn 0.5s ease; /* Slide in animation */
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px); /* Start slightly above */
+        opacity: 0; /* Start transparent */
+    }
+    to {
+        transform: translateY(0); /* End at original position */
+        opacity: 1; /* Fade in to visible */
+    }
+}
+
+.meal-image {
+    width: 100%; /* Set width to 100% for responsiveness */
+    max-width: 400px; /* Limit max width for larger screens */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 12px; /* Match border radius for a cohesive look */
+    margin: 10px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth scaling and shadow transition */
+    animation: fadeIn 1s ease; /* Animation when the image loads */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Shadow for the image */
+}
+
+.meal-image:hover {
+    transform: scale(1.1); /* Slightly larger scale effect on hover */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* More shadow on hover */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start from transparent */
+        transform: translateY(20px); /* Slide up effect */
+    }
+    to {
+        opacity: 1; /* Fade in to visible */
+        transform: translateY(0); /* Slide to original position */
+    }
+}
+
+.meal-info {
+    margin: 20px 0;
+}
+
+.meal-info h2 {
+    font-size: 2em; /* Increased font size for headings */
+    margin-bottom: 10px;
+    color: #444; /* Darker color for contrast */
+    position: relative; /* For pseudo-element */
+}
+
+.meal-info h2::after {
+    content: ""; /* Pseudo-element for underline */
+    display: block;
+    width: 60px; /* Set width of underline */
+    height: 4px; /* Set height of underline */
+    background: #007bff; /* Underline color */
+    margin-top: 5px; /* Spacing between title and underline */
+    transition: width 0.3s ease; /* Smooth width transition */
+}
+
+.meal-info h2:hover::after {
+    width: 100%; /* Full underline on hover */
+}
+
+.meal-info h3 {
+    font-size: 1.2em;
+    margin: 5px 0;
+    color: #666; /* Lighter color for secondary information */
+}
+
+.meal-info ul,
+.meal-info ol {
+    margin: 10px 0;
+    padding-left: 20px;
+    list-style-type: disc; /* Custom bullet points */
+    animation: fadeIn 0.5s ease; /* Animation for list appearance */
+}
+
+.youtube-link {
+    display: inline-block;
+    margin: 15px 0;
+    color: #007bff;
+    text-decoration: none;
+    position: relative; /* For pseudo-element */
+    overflow: hidden; /* Prevent overflow of hover effects */
+}
+
+.youtube-link::after {
+    content: ""; /* Pseudo-element for hover underline */
+    position: absolute;
+    left: 50%; /* Center the underline */
+    bottom: 0; /* Align to bottom */
+    width: 100%; /* Full width */
+    height: 2px; /* Height of the underline */
+    background: #007bff; /* Underline color */
+    transform: translateX(-50%) scaleX(0); /* Start hidden */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.youtube-link:hover::after {
+    transform: translateX(-50%) scaleX(1); /* Show underline on hover */
+}
+
+.like-button {
+    padding: 12px 20px; /* Increased padding for button */
+    font-size: 1em;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth background color and scale transition */
+    margin-top: 20px; /* Add margin above the button */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for button */
+    position: relative; /* For pseudo-element */
+}
+
+.like-button::before {
+    content: ""; /* Pseudo-element for hover effect */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%; /* Increase width for hover effect */
+    height: 300%; /* Increase height for hover effect */
+    background-color: rgba(255, 255, 255, 0.2); /* Light effect */
+    transform: translate(-50%, -50%) scale(0); /* Start hidden */
+    border-radius: 50%; /* Make it circular */
+    transition: transform 0.3s ease; /* Smooth transition */
+    z-index: 0; /* Send to background */
+}
+
+.like-button:hover::before {
+    transform: translate(-50%, -50%) scale(1); /* Show on hover */
+}
+
+.like-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Scale effect on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Shadow increase on hover */
+    z-index: 1; /* Bring button to the front */
+}

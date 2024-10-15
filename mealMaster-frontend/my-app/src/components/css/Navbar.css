@@ -1,0 +1,87 @@
+.navbar {
+  background-color: #1E2A5E;
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo Styling */
+.logo img {
+  width: 150px; /* Change this value to the desired width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: right;
+  gap: 20px;
+}
+
+.nav-links li {
+  display: inline-block;
+}
+
+.nav-links a {
+  color: white; /* White text color */
+  text-decoration: none;
+  font-weight: 500;
+  margin-right: 40px;
+}
+
+.nav-links a:hover {
+  color: #ffdd57; /* Change color on hover */
+  transition: color 0.3s ease;
+}
+
+/* Profile Avatar and Dropdown Styling */
+.profile-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 50px;
+  transition: transform 0.3s ease; /* Animation for hover */
+}
+
+.avatar:hover {
+  transform: scale(1.1); /* Enlarge on hover */
+}
+
+/* Dropdown Styling */
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: #f9f9f9;
+  min-width: 120px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 4px;
+}
+
+.dropdown div {
+  padding: 12px 16px;
+  text-align: left;
+  cursor: pointer;
+  color: #1E2A5E;
+  font-weight: 500;
+}
+
+.dropdown div:hover {
+  background-color: #ffdd57;
+  color: white;
+}
+
+/* Show dropdown on hover */
+.profile-menu:hover .dropdown {
+  display: block;
+}

@@ -1,0 +1,45 @@
+/* ShimmerCard.css */
+
+.shimmer-card {
+    width: 250px;
+    height: 300px;
+    font-size: small;
+    padding: 10px;
+    background-color: #f0f0f0; /* Light grey background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px;
+    overflow: hidden; /* Ensure inner elements don’t overflow */
+  }
+  
+  .shimmer-image {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 50%, #e0e0e0 75%);
+    animation: shimmer 1.5s infinite; /* Shimmer animation */
+  }
+  
+  .shimmer-mealName,
+  .shimmer-preparationTime,
+  .shimmer-cuisine,
+  .shimmer-isVeg {
+    height: 16px;
+    margin: 10px 0;
+    background: linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 50%, #e0e0e0 75%);
+    animation: shimmer 1.5s infinite; /* Shimmer animation */
+  }
+  
+  .shimmer-horizontal {
+    display: flex;
+    justify-content: space-between;
+    font-size: x-small;
+  }
+  
+  @keyframes shimmer {
+    0% {
+      background-position: -200px 0; /* Start off-screen */
+    }
+    100% {
+      background-position: 200px 0; /* Move it to the right */
+    }
+  }
+  
